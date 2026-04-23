@@ -15,137 +15,159 @@ type College = {
   fees: string;
 };
 
-/* COLLEGE DATA */
+/* ✅ UPDATED 14 COLLEGES DATA */
 export const COLLEGE_DATA: College[] = [
   {
-    id: "iit-delhi",
-    name: "Indian Institute of Technology (IIT) Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    about:
-      "One of India’s top engineering institutes, known for research, innovation, and excellence across STEM fields.",
-    programs: ["Engineering", "Technology", "Management", "Sciences", "Humanities"],
-    ranking: "NIRF Rank 2",
-    accreditation: "NAAC A++, NBA Accredited",
+    id: "bharath",
+    name: "Bharath Institute of Higher Education and Research",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    about: "Leading deemed university offering engineering, medical, and research programs.",
+    programs: ["Engineering", "Medical", "Management"],
+    ranking: "Top Private",
+    accreditation: "NAAC A",
     fees: "₹1L - ₹3L/year",
   },
   {
-    id: "iit-bombay",
-    name: "Indian Institute of Technology (IIT) Bombay",
-    city: "Mumbai",
-    state: "Maharashtra",
-    about:
-      "Premier engineering institute with global recognition, strong placements, and leading research output.",
-    programs: ["Engineering", "AI/ML", "Sciences", "Management"],
-    ranking: "NIRF Rank 3",
-    accreditation: "NAAC A++, NBA Accredited",
-    fees: "₹1L - ₹3L/year",
+    id: "avit",
+    name: "Aarupadai Veedu Institute of Technology (AVIT)",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    about: "Engineering college under Vinayaka Missions group.",
+    programs: ["Engineering", "CSE", "ECE"],
+    ranking: "Top Private",
+    accreditation: "AICTE",
+    fees: "₹80k - ₹2L/year",
   },
   {
-    id: "iim-ahmedabad",
-    name: "Indian Institute of Management (IIM) Ahmedabad",
-    city: "Ahmedabad",
-    state: "Gujarat",
-    about:
-      "India’s top management school renowned for leadership programs, MBA excellence, and global reputation.",
-    programs: ["MBA", "Management", "Business Analytics"],
-    ranking: "NIRF Rank 1 (MBA)",
-    accreditation: "AACSB Accredited",
-    fees: "₹15L - ₹25L/course",
+    id: "avmc",
+    name: "Aarupadai Veedu Medical College (AVMC)",
+    city: "Puducherry",
+    state: "Puducherry",
+    about: "Recognized medical college offering MBBS and healthcare programs.",
+    programs: ["MBBS", "Nursing"],
+    ranking: "Medical Institute",
+    accreditation: "NMC",
+    fees: "₹5L - ₹15L/year",
   },
   {
-    id: "aiims-delhi",
-    name: "All India Institute of Medical Sciences (AIIMS) Delhi",
-    city: "New Delhi",
-    state: "Delhi",
-    about:
-      "India’s #1 medical institute known for world-class education, clinical excellence, and research.",
-    programs: ["MBBS", "Nursing", "Medical Specializations"],
-    ranking: "NIRF Rank 1 (Medical)",
-    accreditation: "NMC Approved",
-    fees: "₹5k - ₹50k/year",
-  },
-  {
-    id: "nlsiu",
-    name: "National Law School of India University (NLSIU)",
-    city: "Bengaluru",
-    state: "Karnataka",
-    about:
-      "India's top law school known for academic excellence, top-tier moot competitions, and strong placements.",
-    programs: ["BA LLB", "LLM", "Public Policy"],
-    ranking: "NIRF Rank 1 (Law)",
+    id: "mgr",
+    name: "Dr. M.G.R. Educational and Research Institute",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    about: "Deemed university offering engineering and health sciences.",
+    programs: ["Engineering", "Medical"],
+    ranking: "Top Private",
     accreditation: "NAAC A+",
-    fees: "₹2L - ₹4L/year",
-  },
-  {
-    id: "delhi-university",
-    name: "University of Delhi (DU)",
-    city: "New Delhi",
-    state: "Delhi",
-    about:
-      "Central university known for strong academics, vibrant campus culture, and world-class humanities programs.",
-    programs: ["Arts", "Commerce", "Sciences", "Management"],
-    ranking: "Top 20 India",
-    accreditation: "NAAC A+",
-    fees: "₹10k - ₹1L/year",
-  },
-  {
-    id: "iith",
-    name: "Indian Institute of Technology Hyderabad",
-    city: "Hyderabad",
-    state: "Telangana",
-    about:
-      "Top engineering institute with strong research culture and leading technology innovation.",
-    programs: ["Engineering", "Computer Science", "Design"],
-    ranking: "Top 10 India",
-    accreditation: "NBA Accredited",
-    fees: "₹1L - ₹3L/year",
-  },
-  {
-    id: "iisc",
-    name: "Indian Institute of Science (IISc)",
-    city: "Bengaluru",
-    state: "Karnataka",
-    about:
-      "India’s premier science and research university with elite global research collaborations.",
-    programs: ["Science", "Engineering", "Interdisciplinary Research"],
-    ranking: "Top 2 India",
-    accreditation: "NAAC A++",
     fees: "₹1L - ₹4L/year",
   },
   {
-    id: "nit-warangal",
-    name: "NIT Warangal",
-    city: "Warangal",
-    state: "Telangana",
-    about:
-      "One of India’s top NITs with strong faculty, labs, and excellent placements.",
-    programs: ["Engineering", "Computer Science", "Electronics"],
-    ranking: "Top 50 India",
-    accreditation: "NBA Accredited",
-    fees: "₹70k - ₹2L/year",
+    id: "hindustan",
+    name: "Hindustan Institute of Technology and Science",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    about: "Known for engineering and aviation programs.",
+    programs: ["Engineering", "Aviation"],
+    ranking: "Top Private",
+    accreditation: "NAAC A",
+    fees: "₹1L - ₹3L/year",
   },
   {
-    id: "vit",
-    name: "Vellore Institute of Technology (VIT)",
-    city: "Vellore",
+    id: "kalasalingam",
+    name: "Kalasalingam Academy of Research and Education",
+    city: "Krishnankoil",
     state: "Tamil Nadu",
-    about:
-      "Popular private university known for placements, strong engineering programs, and modern campus.",
-    programs: ["Engineering", "Computer Science", "Business"],
+    about: "Research-focused university with strong engineering programs.",
+    programs: ["Engineering", "AI/ML"],
     ranking: "Top 100 India",
     accreditation: "NAAC A++",
-    fees: "₹1.5L - ₹4L/year",
+    fees: "₹1L - ₹3L/year",
+  },
+  {
+    id: "prist",
+    name: "PRIST University",
+    city: "Thanjavur",
+    state: "Tamil Nadu",
+    about: "Private university offering multiple UG and PG programs.",
+    programs: ["Engineering", "Arts"],
+    ranking: "Private University",
+    accreditation: "UGC",
+    fees: "₹50k - ₹2L/year",
+  },
+  {
+    id: "sathyabama",
+    name: "Sathyabama Institute of Science and Technology",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    about: "Top-ranked institute known for placements.",
+    programs: ["Engineering", "Architecture"],
+    ranking: "Top 50 India",
+    accreditation: "NAAC A++",
+    fees: "₹1.5L - ₹3L/year",
+  },
+  {
+    id: "saveetha",
+    name: "Saveetha University",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    about: "Popular for medical, dental, and engineering programs.",
+    programs: ["Medical", "Dental", "Engineering"],
+    ranking: "Top Private",
+    accreditation: "NAAC A++",
+    fees: "₹1L - ₹5L/year",
   },
   {
     id: "srm",
     name: "SRM Institute of Science and Technology",
     city: "Chennai",
     state: "Tamil Nadu",
-    about:
-      "Large private university offering diverse programs and strong placement opportunities.",
-    programs: ["Engineering", "Management", "Medicine"],
+    about: "Well-known university with strong placements.",
+    programs: ["Engineering", "Management"],
+    ranking: "Top 100 India",
+    accreditation: "NAAC A++",
+    fees: "₹1L - ₹4L/year",
+  },
+  {
+    id: "takshashila",
+    name: "Takshashila University",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    about: "Emerging university focused on innovation.",
+    programs: ["Engineering", "Science"],
+    ranking: "Emerging",
+    accreditation: "UGC",
+    fees: "₹1L - ₹2L/year",
+  },
+  {
+    id: "veltech",
+    name: "Vel Tech Rangarajan Dr. Sagunthala R&D Institute",
+    city: "Chennai",
+    state: "Tamil Nadu",
+    about: "Engineering-focused university with research orientation.",
+    programs: ["Engineering", "Robotics"],
     ranking: "Top 150 India",
+    accreditation: "NAAC A",
+    fees: "₹1L - ₹3L/year",
+  },
+  {
+    id: "vit",
+    name: "Vellore Institute of Technology (VIT)",
+    city: "Vellore",
+    state: "Tamil Nadu",
+    about: "Top private university known for placements.",
+    programs: ["Engineering", "Business"],
+    ranking: "Top 20 India",
+    accreditation: "NAAC A++",
+    fees: "₹1.5L - ₹4L/year",
+  },
+  {
+    id: "amrita",
+    name: "Amrita Vishwa Vidyapeetham",
+    city: "Coimbatore",
+    state: "Tamil Nadu",
+    about: "Top-ranked private university focused on research.",
+    programs: ["Engineering", "Medical", "AI/ML"],
+    ranking: "Top 10 Private",
     accreditation: "NAAC A++",
     fees: "₹1L - ₹4L/year",
   },
@@ -166,74 +188,37 @@ export default function DomesticColleges(): JSX.Element {
   return (
     <div className="min-h-screen bg-[#f1f7ff] text-[#0b1f3b]">
 
-      {/* HERO */}
-      <div
-        className="w-full h-64 bg-cover bg-center flex items-center"
-        style={{ backgroundImage: `url("${heroImage}")` }}
-      >
-        <div className="bg-black/40 p-6 rounded-xl max-w-xl ml-10">
-          <h1 className="text-3xl font-bold text-white">Domestic Colleges</h1>
-          <p className="text-white/90 text-sm mt-2">
-            Premier institutions for higher education in India
-          </p>
-        </div>
-      </div>
-
-      {/* MAIN CONTENT */}
       <main className="max-w-7xl mx-auto px-6 py-10">
 
-        {/* SEARCH BAR */}
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search colleges..."
-          className="
-            w-full px-4 py-3 rounded-xl border border-[#e5efff] shadow-sm
-            focus:outline-none focus:ring-2 focus:ring-[#1f4f9a] mb-8
-          "
+          className="w-full px-4 py-3 rounded-xl border mb-8"
         />
 
-        {/* COLLEGE GRID */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((c) => (
-            <div
-              key={c.id}
-              className="
-                group bg-white p-6 rounded-2xl border border-[#e6eef9] 
-                shadow-sm transition-all
-                hover:shadow-xl hover:border-[#22c55e] hover:-translate-y-2
-              "
-            >
-              <h3 className="text-lg font-semibold group-hover:text-[#1f4f9a] transition">
-                {c.name}
-              </h3>
+            <div key={c.id} className="bg-white p-6 rounded-2xl shadow">
 
-              <p className="text-sm text-[#64748b] mt-1">
+              <h3 className="text-lg font-semibold">{c.name}</h3>
+
+              <p className="text-sm text-gray-500">
                 {c.city}, {c.state}
               </p>
 
-              <p className="text-sm text-[#475569] mt-3 line-clamp-3">
-                {c.about}
-              </p>
+              <p className="text-sm mt-3">{c.about}</p>
 
-              {/* VIEW DETAILS BUTTON (EduElite Theme) */}
               <Link
                 to={`/domestic-colleges/${c.id}`}
-                className="inline-block w-full text-center px-4 py-2 rounded-full text-white text-sm font-medium transition-all duration-300 shadow"
+                className="block mt-4 text-white text-center py-2 rounded-full"
                 style={{
                   background: `linear-gradient(90deg, ${BLUE}, ${GREEN})`,
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = `linear-gradient(90deg, ${GREEN}, ${BLUE})`;
-                  (e.currentTarget as HTMLElement).style.boxShadow = `0 12px 30px rgba(34,165,90,0.18)`;
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.background = `linear-gradient(90deg, ${BLUE}, ${GREEN})`;
-                  (e.currentTarget as HTMLElement).style.boxShadow = ``;
                 }}
               >
                 View Details
               </Link>
+
             </div>
           ))}
         </div>
