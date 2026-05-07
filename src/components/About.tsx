@@ -22,7 +22,7 @@ const About = () => {
             </h2>
 
             <p className="text-lg text-gray-600 mb-6">
-              EduEliteGlobal Agencies helps students achieve their dreams of studying abroad.
+                EeshaGlobal Services helps students achieve their dreams of studying abroad.
             </p>
 
             <p className="text-lg text-gray-600 mb-8">
@@ -72,7 +72,7 @@ const About = () => {
                       D
                     </div>
                     <h3 className="font-bold text-lg">Directors</h3>
-                    <p className="text-gray-600 mt-2">Singhamsetty Shiva</p>
+                    <p className="text-gray-600 mt-2">Singamsetty Venkata Shiva</p>
                     <p className="text-gray-600">Kanakam Bhargav</p>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ const About = () => {
                       MD
                     </div>
                     <h3 className="font-bold text-lg">Managing Director</h3>
-                    <p className="text-gray-600 mt-2">Prudhvi Reddy Ayuluri</p>
+                    <p className="text-gray-600 mt-2">Prudhvi Reddy Ailuri</p>
                   </div>
                 </div>
 
