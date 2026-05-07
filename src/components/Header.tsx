@@ -13,12 +13,14 @@ export default function Header(): JSX.Element {
   const GREEN = "#34A853";
   const SOFT_BORDER = "#e6f7ff";
 
-  // Shadow on scroll
+  // SHADOW ON SCROLL
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 12);
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -26,53 +28,67 @@ export default function Header(): JSX.Element {
     <header
       className={`w-full sticky top-0 z-50 backdrop-blur-lg transition-shadow duration-300 ${
         isScrolled ? "shadow-lg" : "shadow-none"
-      } bg-white/80 border-b`}
+      } bg-white/90 border-b`}
       style={{ borderColor: SOFT_BORDER }}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        
-        {/* 🔥 GRID LAYOUT FOR EQUAL SPACING */}
-        <div className="grid grid-cols-3 items-center h-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
 
-          {/* ✅ LEFT: LOGO */}
-          <div className="flex items-center gap-4 justify-start">
-            <Link to="/" className="flex items-center gap-3 group">
+        {/* MAIN NAVBAR */}
+        <div className="flex items-center justify-between gap-3 h-20">
+
+          {/* LEFT - LOGO */}
+          <div className="flex items-center gap-2 min-w-0">
+
+            <Link
+              to="/"
+              className="flex items-center gap-2 group"
+            >
+              {/* LOGO */}
               <img
                 src={logo}
                 alt="EeshaGlobalServices"
-                className="h-16 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-14 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="hidden sm:block">
+
+              {/* TEXT */}
+              <div className="block leading-tight">
                 <div
-                  className="text-lg font-semibold"
+                  className="text-[13px] md:text-lg font-semibold whitespace-nowrap"
                   style={{ color: NAVY }}
                 >
                   Eesha Global
                 </div>
-                <div className="text-sm text-gray-500">Services</div>
+
+                <div className="text-[11px] md:text-sm text-gray-500 whitespace-nowrap">
+                  Services
+                </div>
               </div>
             </Link>
           </div>
 
-          {/* ✅ CENTER: SEARCH + NAV */}
-          <div className="hidden md:flex items-center justify-center gap-8">
+          {/* CENTER - SEARCH + NAV */}
+          <div className="hidden lg:flex items-center justify-center gap-8 flex-1">
 
             {/* SEARCH */}
             <div
-              className="hidden md:flex flex-shrink-0 items-center rounded-lg px-3 py-2 gap-2 bg-white/70 shadow-sm"
-              style={{ border: `1px solid ${SOFT_BORDER}` }}
+              className="flex items-center rounded-full px-3 py-2 gap-2 bg-white shadow-sm"
+              style={{
+                border: `1px solid ${SOFT_BORDER}`,
+              }}
             >
               <Search className="w-4 h-4 text-gray-400" />
+
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Explore Programs"
-                className="bg-transparent outline-none text-base w-40 text-gray-700"
+                className="bg-transparent outline-none text-sm w-40 text-gray-700"
               />
             </div>
 
-            {/* NAV */}
-            <nav className="flex items-center gap-8">
+            {/* NAV LINKS */}
+            <nav className="flex items-center gap-6">
+
               {[
                 ["working-professionals", "Working Professionals"],
                 ["graduates", "Graduates"],
@@ -82,51 +98,75 @@ export default function Header(): JSX.Element {
                 <Link
                   key={path}
                   to={`/${path}`}
-                  className="text-base relative group"
+                  className="text-sm relative group"
                   style={{ color: NAVY }}
                 >
                   <span className="group-hover:text-green-600 transition-colors duration-200">
                     {label}
                   </span>
+
                   <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-green-500 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
 
-              <a
-                href="/study-abroad"
-                className="text-base relative group"
+              <Link
+                to="/study-abroad"
+                className="text-sm relative group"
                 style={{ color: NAVY }}
               >
                 <span className="group-hover:text-green-600">
                   Study Abroad
                 </span>
-              </a>
+              </Link>
 
               <Link
                 to="/visa-services"
-                className="text-base relative group"
+                className="text-sm relative group"
                 style={{ color: NAVY }}
               >
                 <span className="group-hover:text-green-600">
                   Visa Services
                 </span>
               </Link>
+
             </nav>
           </div>
 
-          {/* ✅ RIGHT: BUTTON + MOBILE */}
-          <div className="flex items-center justify-end gap-4">
+          {/* RIGHT SIDE */}
+          <div className="flex items-center gap-3">
+
+            {/* CONTACT BUTTON */}
             <Link
               to="/contact"
-              className="hidden md:inline-flex items-center px-6 py-3 rounded-full text-base border transition-all duration-300 hover:bg-blue-50"
-              style={{ borderColor: SOFT_BORDER, color: NAVY }}
+              className="hidden lg:inline-flex items-center px-5 py-2 rounded-full text-sm border transition-all duration-300 hover:bg-blue-50"
+              style={{
+                borderColor: SOFT_BORDER,
+                color: NAVY,
+              }}
             >
               Contact Us
             </Link>
 
+            {/* MOBILE SEARCH */}
+            <div
+              className="flex lg:hidden items-center rounded-full px-2 py-2 gap-1 bg-white shadow-sm max-w-[140px]"
+              style={{
+                border: `1px solid ${SOFT_BORDER}`,
+              }}
+            >
+              <Search className="w-4 h-4 text-gray-400" />
+
+              <input
+                value={q}
+                onChange={(e) => setQ(e.target.value)}
+                placeholder="Explore"
+                className="bg-transparent outline-none text-xs w-20 text-gray-700"
+              />
+            </div>
+
             {/* MOBILE MENU BUTTON */}
             <button
-              className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-full border"
+              className="lg:hidden inline-flex items-center justify-center h-11 w-11 rounded-full border"
               onClick={() => setMobileOpen(!mobileOpen)}
               style={{ borderColor: BLUE }}
             >
@@ -139,10 +179,12 @@ export default function Header(): JSX.Element {
           </div>
         </div>
 
-        {/* ✅ MOBILE MENU */}
+        {/* MOBILE MENU */}
         {mobileOpen && (
-          <div className="md:hidden pb-4 animate-slideDown">
-            <div className="space-y-2 border-t pt-3">
+          <div className="lg:hidden pb-4 animate-slideDown">
+
+            <div className="space-y-2 border-t pt-4">
+
               {[
                 ["working-professionals", "Working Professionals"],
                 ["graduates", "Graduates"],
@@ -153,26 +195,26 @@ export default function Header(): JSX.Element {
                   key={path}
                   to={`/${path}`}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-3 py-3 text-base hover:bg-green-50 rounded-md"
+                  className="block px-3 py-3 text-sm hover:bg-green-50 rounded-md"
                   style={{ color: NAVY }}
                 >
                   {label}
                 </Link>
               ))}
 
-              <a
-                href="/study-abroad"
-                className="block px-3 py-3 text-base hover:bg-green-50 rounded-md"
+              <Link
+                to="/study-abroad"
+                className="block px-3 py-3 text-sm hover:bg-green-50 rounded-md"
                 style={{ color: NAVY }}
                 onClick={() => setMobileOpen(false)}
               >
                 Study Abroad
-              </a>
+              </Link>
 
               <Link
                 to="/visa-services"
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-3 text-base hover:bg-green-50 rounded-md"
+                className="block px-3 py-3 text-sm hover:bg-green-50 rounded-md"
                 style={{ color: NAVY }}
               >
                 Visa Services
@@ -181,11 +223,12 @@ export default function Header(): JSX.Element {
               <Link
                 to="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-3 text-base"
+                className="block px-3 py-3 text-sm rounded-md bg-blue-50"
                 style={{ color: BLUE }}
               >
                 Contact Us
               </Link>
+
             </div>
           </div>
         )}
@@ -194,9 +237,16 @@ export default function Header(): JSX.Element {
       {/* ANIMATION */}
       <style>{`
         @keyframes slideDown {
-          from { opacity: 0; transform: translateY(-8px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(-8px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
+
         .animate-slideDown {
           animation: slideDown 0.3s ease-out;
         }
