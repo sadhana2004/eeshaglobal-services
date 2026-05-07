@@ -123,8 +123,10 @@ const Footer = () => {
 
               {/* TEXT */}
               <div className="text-sm text-white/90 space-y-1">
-                <p>eeshaglobalservices@gmail.com</p>
+                <p>contactus@eeshaglobalservices.com</p>
                 <p>+91 7093548281</p>
+                <p>+91 9959562169</p>
+                <p>+91 8341617304</p>
               </div>
             </div>
           </div>
